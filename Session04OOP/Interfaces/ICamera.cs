@@ -4,5 +4,10 @@
     {
         void TakePhoto();
         void RecordVideo();
+        // Explicit Implementation 
+        void Process();
+
+
+
     }
 }

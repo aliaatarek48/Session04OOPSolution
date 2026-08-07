@@ -19,5 +19,16 @@
         // ICamera part of the contract
         public void TakePhoto() => Console.WriteLine("  Taking a photo...");
         public void RecordVideo() => Console.WriteLine("  Recording a video...");
+
+        // Explicit Implementation 
+        void IPhone.process()
+        {
+            Console.WriteLine("IPhone Processing...");
+        }
+
+        void ICamera.Process()
+        {
+            Console.WriteLine("ICamera Processing...");
+        }
     }
 }

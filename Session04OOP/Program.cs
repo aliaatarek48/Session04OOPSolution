@@ -4,8 +4,61 @@
     {
         static void Main(string[] args)
         {
+            #region Interface 
+
+            #region Example 01
+            //// A basic phone signs ONE contract: IPhone. It can only call / SMS.
+            //BasicPhone basic = new BasicPhone("Nokia 105");
+            //basic.Call("012-345-6789");
+            //basic.SendSMS("Hello");
+
+            //// An interface reference can point to any implementer:
+            //IPhone phone = basic;
+            //phone.Call("012-000-1111");
+
+            //SmartPhone smart = new SmartPhone("Galaxy S24");
+
+            //smart.Call("012-345-6789");
+            //smart.SendSMS("Hi");
+            //smart.TakePhoto();
+            //smart.RecordVideo();
+
+            //// Use it as a phone:
+            //IPhone asPhone = smart;
+            //asPhone.Call("012-345-6789");
+            //asPhone.SendSMS("Hi");
+            //asPhone.TakePhoto(); // invalid
+            //asPhone.RecordVideo(); // invalid 
+
+            //// Use the SAME object as a camera:
+            //ICamera asCamera = smart;
+            //asCamera.TakePhoto();
+            //asCamera.RecordVideo(); 
+            #endregion
+
+            #region  Explicit Implementation And Default Interface Methods 
+
+            //SmartPhone smartPhone = new SmartPhone("IPhone 15");
+
+            ////smartPhone.Process(); // Invalid 
+
+            //IPhone asPhone = smartPhone;
+            //ICamera asCamera = smartPhone;
+
+            //asCamera.Process();
+            //asPhone.process();
+
+            //// Default Interface Methods
+            ////smartPhone.LogProcess();// Invalid
+            //asPhone.LogProcess();
+
+
+            #endregion
+
+            #endregion
 
             #region Abstract Class 
+
             //// Shape s = new Shape("Red");   //  Compiler Error you cannot create it directly
 
             //Circle circle = new Circle("Red", 5);
@@ -34,39 +87,11 @@
             //    totalArea += shape.Area();
             //}
             //Console.WriteLine($"Total Area = {totalArea:F2}");
-            #endregion
 
-            #region Interface 
-            //// A basic phone signs ONE contract: IPhone. It can only call / SMS.
-            //BasicPhone basic = new BasicPhone("Nokia 105");
-            //basic.Call("012-345-6789");
-            //basic.SendSMS("Hello");
-
-            //// An interface reference can point to any implementer:
-            //IPhone phone = basic;
-            //phone.Call("012-000-1111");
-
-            //SmartPhone smart = new SmartPhone("Galaxy S24");
-
-            //smart.Call("012-345-6789");
-            //smart.SendSMS("Hi");
-            //smart.TakePhoto();
-            //smart.RecordVideo();
-
-            //// Use it as a phone:
-            //IPhone asPhone = smart;
-            //asPhone.Call("012-345-6789");
-            //asPhone.SendSMS("Hi");
-            //asPhone.TakePhoto(); // invalid
-            //asPhone.RecordVideo(); // invalid 
-
-            //// Use the SAME object as a camera:
-            //ICamera asCamera = smart;
-            //asCamera.TakePhoto();
-            //asCamera.RecordVideo();
             #endregion
 
             #region Abstract Class + Interface TOGETHER
+
             //Employee[] employees =
             //{
             //    new Manager(1, "Ahmed", 30000),
@@ -86,6 +111,7 @@
             //    else
             //        Console.WriteLine("   Bonus  = (not bonus able)");
             //}
+
             #endregion
 
         }
